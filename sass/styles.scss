@@ -1,0 +1,279 @@
+@import './partials/_reset';
+@import './partials/_clearfixes';
+@import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+
+$dark-color : #14273D; // dark blue
+$torquise : #389FA8; // torquise
+$light-torquise : #57C1C7;  // light torquise
+$white : #EFF9EC; // whitish
+
+$small: 'only screen and (max-width: 640px)';
+$medium: 'only screen and (min-width: 641px) and (max-width: 960px)';
+$large: 'only screen (max-width: 961px)';
+
+
+
+
+
+body {
+  background: $torquise;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  line-height: 1;
+  font-size: 16px;
+  font-family: 'Droid Serif', serif;
+  display: block;
+
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.7rem;
+  text-align:left;
+  color: $dark-color;
+  display: block;
+
+}
+
+
+h1 {
+  font-size: 1.1em;
+  line-height: 1.5em;
+  color: $light-torquise;
+  background-color: $white;
+  padding: 30px 40px;
+  text-transform: uppercase;
+  letter-spacing: .3em;
+  border-bottom: 1px solid $light-torquise;
+  display: block;
+  max-width: 900px;
+  height: 87px;
+  margin: auto;
+  box-sizing: border-box;
+}
+
+.row {
+  background-color: $white;
+  margin:auto;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  display: block;
+
+  @media #{$large}{
+    max-width: 900px;
+  }
+}
+
+
+.nav {
+
+  @media #{$medium}{
+    display:block;
+    background-color: $white;
+    text-align: center;
+    border-bottom:1px solid $light-torquise;
+  }
+
+  ul {
+    display: block;
+    background-color: $white;
+    text-align: center;
+    border-bottom: 1px solid $light-torquise;
+    list-style: none;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+  }
+
+  li {
+    color: $dark-color;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    list-style:none;
+
+    @media #{$medium}{
+      display: inline-block;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: $dark-color;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+
+    @media #{$medium}{
+      display: block;
+      padding: 15px 15px;
+      border-bottom: none;
+
+    }
+  }
+
+  &:hover{
+    color: $light-torquise;
+  }
+}
+
+.content {
+  padding:40px;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  display: block;
+
+  @media #{$large}{
+    width: 70%;
+    float:left;
+    box-sizing: border-box;
+    border-right: 1px solid $light-torquise;
+  }
+  article {
+    display: block;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+  }
+
+  h2 {
+    font-size: 2em;
+    line-height: 1em;
+    text-align:left;
+    color: $light-torquise;
+    margin-bottom: 10px;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+  }
+
+  a {
+    text-decoration: none;
+    color: $dark-color;
+    border-bottom: 1px dashed $light-torquise;
+    padding-bottom: 1px;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+
+  }
+
+  h3 {
+    font-size: 1em;
+    line-height: 1em;
+    text-align:left;
+    color: $light-torquise;
+    margin-bottom: 40px;
+    font: inherit;
+    vertical-align: baseline;
+    display: block;
+
+  }
+
+  aside {
+    padding: 40px;
+    display: block;
+    width: 30%;
+    float:right;
+    box-sizing: border-box;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+  }
+
+  h4 {
+    font-size: 1.3;
+    line-height: 1em;
+    text-align:left;
+    color: $light-torquise;
+    margin-bottom: 10px;
+    font: inherit;
+    display: block;
+
+  }
+
+  a.read_more {
+    font-size: 1em;
+    line-height: 1em;
+    text-align: center;
+    color: $light-torquise;
+    display: block;
+    background-color: $torquise;
+    border-bottom: none;
+    padding: 20px 10px;
+    margin-top: 40px;
+    text-decoration: none;
+    font: inherit;
+    vertical-align: baseline;
+
+  }
+}// end of content
+
+
+.left {
+  display: block;
+  width: 50%;
+  float:right;
+  box-sizing: border-box;
+  font: inherit;
+  vertical-align: baseline;
+
+  footer p {
+    line-height: 60px;
+
+  }
+
+  p {
+    font-size: 1rem;
+    font: inherit;
+    vertical-align: baseline;
+    display: block;
+
+  }
+}
+
+.right {
+  font: inherit;
+  vertical-align: baseline;
+  display: block;
+
+  @media #{$large}{
+    width: 50%;
+    float: right;
+    box-sizing: border-box;
+  }
+}
+
+.footer_links {
+  ul {
+    list-style: none;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+
+    li {
+      display: inline-block;
+      color: $dark-color;
+      font-size: 100%;
+      font: inherit;
+      vertical-align: baseline;
+
+      a {
+        line-height: 60px;
+        display: block;
+        padding-right: 10px;
+        border-bottom: none;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+
+      }
+    }
+  }
+
+  @media #{$large}{
+    text-align:left;
+  }
+}
